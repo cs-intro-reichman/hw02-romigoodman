@@ -7,7 +7,7 @@ public class Divisors
 	int chosenNumber = Integer.parseInt(args[0]);
 	int count = 1;
 	
-	while (count <= chosenNumber); 
+	while (count <= chosenNumber)
 	{
 		if (chosenNumber%count==0)
 		{	
