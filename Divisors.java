@@ -9,7 +9,9 @@ public class Divisors
 	
 	while (count <= chosenNumber)
 	{
-		if (chosenNumber%count==0)
+		int modMod = chosenNumber%count;
+
+		if (modMod==0)
 		{	
 			System.out.println(count);
 		}
