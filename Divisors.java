@@ -6,14 +6,12 @@ public class Divisors
 		
 	int chosenNumber = Integer.parseInt(args[0]);
 	int count = 1;
-	int modulus = 0;
 	
 	while (count <= chosenNumber); 
 	{
-		modulus = chosenNumber%count;
-		if (modulus==0)
+		if (chosenNumber%count==0)
 		{	
-			System.out.println(modulus);
+			System.out.println(count);
 		}
 		count = count + 1;	
 	}
