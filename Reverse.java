@@ -9,9 +9,14 @@ public class Reverse {
 		
 		reveredWord = reveredWord + chosenWord.charAt(i);
 
-		 System.out.println(reveredWord);
-
-		 System.out.println("The middle character is "+ chosenWord.charAt((chosenWord.length()/2)-1));
-
+		System.out.println(reveredWord);
+		System.out.println("The middle character is " + (chosenWord.charAt((chosenWord.length()/2)-1);
+		//int wordIsEven = chosenWord.length()%2;
+		 
+		// if (wordIsEven == 0) {
+		// 	 System.out.println("The middle character is " + (chosenWord.charAt((chosenWord.length())/2)-1));
+		// } else {
+		// 	 System.out.println("The middle character is " + (chosenWord.charAt((chosenWord.length())/2);
+		 }
 	}
-} 
+
