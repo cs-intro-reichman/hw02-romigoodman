@@ -111,7 +111,7 @@ public class OneOfEachStats {
 	System.out.println("Number of families with 2 children: " + twoChildren);
 	System.out.println("Number of families with 3 children: " + threeChildren );
 	System.out.println("Number of families with 4 or more children: "+ fourOrMore );
-	System.out.println("The most common number of children is " + mostCommon);
+	System.out.println("The most common number of children is " + mostCommon+".");
 		    
 	}
 }
