@@ -37,7 +37,7 @@ public class OneOfEachStats {
             int twoChildren = 0;
             int threeChildren = 0;
             String mostCommon ="";
-            int total = 0;
+            double total = 0;
 
 
 	while (i<=numberOfExperiments) 
@@ -105,7 +105,7 @@ public class OneOfEachStats {
 		}
 	
 
-	int averageNumber = total/numberOfExperiments;
+	double averageNumber = total/numberOfExperiments;
 
 	System.out.println("Average: " + averageNumber + " children to get at least one of each gender.");
 	System.out.println("Number of families with 2 children: " + twoChildren);
