@@ -10,10 +10,9 @@ import java.util.Random;
 public class OneOfEachStats {
 	public static void main (String[] args) {
 		// Gets the two command-line arguments
-		int T = Integer.parseInt(args[0]);
-		int seed = Integer.parseInt(args[1]);
+		
 		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
+         
 		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
@@ -24,6 +23,95 @@ public class OneOfEachStats {
 		//// just like you had in the previous version, except that the 
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
+
+
+
+    int numberOfExperiments = Integer.parseInt(args[0]);
+    int seed = Integer.parseInt(args[1]);
+    Random generator = new Random(seed); 
+
+    int i=1;
+    String toBePrinted = "";
+     		int numberOfChildren = 0;
+            int fourOrMore = 0;
+            int twoChildren = 0;
+            int threeChildren = 0;
+            String mostCommon ="";
+            int total = 0;
+
+
+	while (i<=numberOfExperiments) 
+    {    
+        numberOfChildren = 0;    
+        double randomBoyOrGirl = generator.nextDouble();
+        boolean isGirl = (randomBoyOrGirl>=0.5); 
+        
+        if (isGirl) 
+        {
+           
+            numberOfChildren = numberOfChildren +1; 
+
+            while (isGirl) 
+            {
+            randomBoyOrGirl = generator.nextDouble();
+            isGirl=(randomBoyOrGirl>=0.5); 
+            numberOfChildren = numberOfChildren +1; 
+            }
+        
+        }
+        
+        else
+        {   
+            numberOfChildren = numberOfChildren+1;
+
+            while (!isGirl) 
+            {
+            randomBoyOrGirl = generator.nextDouble();
+            isGirl=(randomBoyOrGirl>=0.5); 
+            numberOfChildren = numberOfChildren + 1;  
+            }
+        }
+        total = total+numberOfChildren;
+
+        if(numberOfChildren>=4) 
+            {
+            fourOrMore++;
+            } 
+        else if (numberOfChildren==3) 
+            {
+            threeChildren++; //3
+            }
+        else if (numberOfChildren==2) 
+            {
+            twoChildren++; 
+            } 
+
+        i++;
+    }			
+	     
+
+
+		if(fourOrMore>threeChildren && fourOrMore>twoChildren)
+		{
+			 mostCommon= "4 or more" ;
+		}
+		else if(threeChildren>fourOrMore && threeChildren>twoChildren)
+		{
+			 mostCommon="3";
+		}
+		else if(twoChildren>fourOrMore && twoChildren>threeChildren)
+		{
+			mostCommon="2";
+		}
+	
+
+	int averageNumber = total/numberOfExperiments;
+
+	System.out.println("Average: " + averageNumber + " children to get at least one of each gender.");
+	System.out.println("Number of families with 2 children: " + twoChildren);
+	System.out.println("Number of families with 3 children: " + threeChildren );
+	System.out.println("Number of families with 4 or more children: "+ fourOrMore );
+	System.out.println("The most common number of children is " + mostCommon);
 		    
 	}
 }
