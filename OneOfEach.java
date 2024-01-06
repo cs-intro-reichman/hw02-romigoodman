@@ -10,6 +10,8 @@ public class OneOfEach
 		boolean isGirl = (randomBoyOrGirl>=0.5);
 		int numberOfChildren = 0;
 
+		// #feedback - using 2 while loops is not needed here. You can just run on a single while loop until you get at least one boy and at least one girl.
+		// This will reduce the complexity of the code.
 		if (isGirl)
 		{
 			toBePrinted = (toBePrinted + "g ");
