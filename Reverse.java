@@ -14,7 +14,7 @@ public class Reverse
 
 		System.out.println(reveredWord);
 
-		
+		// #feedback - Use of "if" is unnecessary here. ((word.length()-1) / 2) will give the middle character in both scenarios.
 		if (((chosenWord.length())%2) == 0 ) //4%2==0
 		{
 			System.out.println("The middle character is " + (chosenWord.charAt((chosenWord.length()/2)-1))); 
