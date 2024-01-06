@@ -17,6 +17,7 @@ public class Perfect
 			toBePrinted = toBePrinted + (i) + " + ";
 		}
 		}
+		// #feedback - checking the length of the result is not needed here.
 		int length = toBePrinted.length();
 		if (toBePrinted.charAt(length-2) == 43){
 			finelPrint = toBePrinted.substring(0,length-2);
